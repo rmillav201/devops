@@ -1,5 +1,5 @@
 # Definir la imagen base para la capa de Maven
-FROM maven:3.8.6-jdk-17 AS maven
+FROM maven:3-alpine
 
 # Compilar las dependencias de Maven y crear el archivo JAR
 RUN mvn clean install
@@ -16,8 +16,6 @@ ENV PORT=${SERVER_PORT:-8000}
 #VOLUME /app/data.sql
 
 #COPY src/main/resources/data.sql /app/data.sql
-
-RUN mvn clean install
 
 CMD ["mvnw", "spring-boot:run"]
 
