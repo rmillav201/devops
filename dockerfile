@@ -8,7 +8,7 @@ COPY . /app
 WORKDIR /app
 
 # Compilación de la aplicación (adapta si la compilación ya se realiza externamente)
-RUN mvn clean install
+#RUN mvn clean install
 
 # Configuración de variables de entorno
 ENV NAME_DB ${DB_HOST:-jdbc:h2:file:./test}
