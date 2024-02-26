@@ -14,7 +14,7 @@ VOLUME /app/data.sql
 
 COPY src/main/resources/data.sql /app/data.sql
 
-RUN mvn clean install
+#RUN mvn clean install
 
 CMD ["mvnw", "spring-boot:run"]
 
