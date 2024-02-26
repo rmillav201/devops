@@ -24,6 +24,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'whoami'
+                sh 'ls -l ./jenkins/scripts/deliver.sh'
+                sh 'chmod +x ./jenkins/scripts/deliver.sh'
+                sh 'ls -l ./jenkins/scripts/deliver.sh'
                 sh 'sudo ./jenkins/scripts/deliver.sh'
             }
         }
