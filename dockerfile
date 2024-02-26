@@ -10,9 +10,9 @@ ENV PASSWORD_DB ${DB_PASSWORD:-password}
 ENV PORT=${SERVER_PORT:-8000}
 
 # Volumen para datos de H2
-VOLUME /app/data.sql
+#VOLUME /app/data.sql
 
-COPY src/main/resources/data.sql /app/data.sql
+#COPY src/main/resources/data.sql /app/data.sql
 
 #RUN mvn clean install
 
