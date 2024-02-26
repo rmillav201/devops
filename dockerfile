@@ -1,9 +1,10 @@
-FROM eclipse-temurin:17.0.10_7-jdk-jammy
+# Definir la imagen base para la capa de Maven
+FROM maven:3.8.6-jdk-17 AS maven
 
-# Instalar Maven si es necesario (ver explicación a continuación)
-RUN apk add --no-cache maven  
-
+# Compilar las dependencias de Maven y crear el archivo JAR
 RUN mvn clean install
+
+FROM eclipse-temurin:17.0.10_7-jdk-jammy
 
 # Configuración de variables de entorno
 #ENV NAME_DB ${DB_HOST:-jdbc:h2:file:./test}
