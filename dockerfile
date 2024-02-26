@@ -1,7 +1,7 @@
 FROM openjdk:17-jdk
 
 # Instalar Maven si es necesario (ver explicación a continuación)
-RUN apk add --no-cache maven  # Corregido para usar la forma adecuada de Alpine Linux
+#RUN apk add --no-cache maven  # Corregido para usar la forma adecuada de Alpine Linux
 
 COPY . /app
 
