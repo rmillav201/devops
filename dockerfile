@@ -1,5 +1,5 @@
 # Utiliza una imagen base que contenga Java 17 y Maven
-FROM openjdk:17.0.3-jdk
+FROM openjdk:17-jdk
 
 # Crea un directorio de trabajo dentro de la imagen
 WORKDIR /app
