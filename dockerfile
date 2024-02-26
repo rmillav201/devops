@@ -16,6 +16,6 @@ ENV PORT=${SERVER_PORT:-8000}
 
 #RUN mvn clean install
 
-CMD ["/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/mavenjenkins/bin/mvn", "spring-boot:run"]
+CMD ["mvn", "spring-boot:run"]
 
 EXPOSE $PORT
