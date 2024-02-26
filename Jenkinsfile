@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh './jenkins/scripts/deliver.sh'
+                sh 'sudo ./jenkins/scripts/deliver.sh'
             }
         }
     }
