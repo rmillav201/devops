@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk
+FROM 17.0.10_7-jdk-jammy
 
 # Instalar Maven si es necesario (ver explicación a continuación)
 #RUN apk add --no-cache maven  # Corregido para usar la forma adecuada de Alpine Linux
