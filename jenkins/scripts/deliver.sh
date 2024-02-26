@@ -23,10 +23,6 @@ set +x
 echo 'The following command runs and outputs the execution of your Java'
 echo 'application (which Jenkins built using Maven) to the Jenkins UI.'
 set -x
-pwd
-cd target
-pwd
-ls -l
-chmod +x ${NAME}-${VERSION}.jar
-ls -l
-java -jar target/${NAME}-${VERSION}.jar
+
+chmod +x target/demo-0.0.1.jar
+java -jar target/demo-0.0.1.jar
