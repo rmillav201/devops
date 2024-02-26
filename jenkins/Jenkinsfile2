@@ -14,11 +14,13 @@ pipeline {
         }
         stage('Docker Build & Push') {
           steps {
-            script {  
-              docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
-                def appmavenjenkins = docker.build("rmillav201/devop:app1", ".")
-                appmavenjenkins.push()
-              }
+            script {
+                withCredentials([usernameColonPassword('docker-hub-credentials', credentialsId: 'rmillav201', storageId: 'Mimamamemima00.')]) {
+                    docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
+                        def appmavenjenkins = docker.build("rmillav201/devop:app1", ".")
+                        appmavenjenkins.push()
+                    }
+                }
             }  
           }  
         }
