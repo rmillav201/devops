@@ -1,10 +1,10 @@
 pipeline {
     agent any
-
+    
     tools {
         maven 'mavenjenkins'
     }
-
+    
     stages {
         stage('Build') {
             steps {
@@ -12,7 +12,7 @@ pipeline {
             }
         }
         stage('Test') {
-            step {
+            steps {
                 sh 'mvn test'
             }
             post {
@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh './jenkins/script/deliver.sh'
+                sh './jenkins/scripts/deliver.sh'
             }
         }
     }
