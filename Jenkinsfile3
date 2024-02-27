@@ -26,7 +26,7 @@ pipeline {
         stage('Docker Build & Push') {
           steps {
             script {  
-              docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
+              docker.withRegistry('https://registry.hub.docker.com', '6f261683-c913-4d2d-9381-219d48be6aa7') {
                 def appmavenjenkins = docker.build("rmillav201/devop:${gitcommit}", ".")
                 appmavenjenkins.push()
               }
