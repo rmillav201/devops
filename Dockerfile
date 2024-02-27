@@ -8,6 +8,6 @@ ENV USERNAME_DB ${DB_USERNAME:-user}
 ENV PASSWORD_DB ${DB_PASSWORD:-password}
 ENV PORT=${SERVER_PORT:-8000}
 
-EXPOSE $PORT
+EXPOSE 8000
 CMD java -jar /appmavenjenkins/app.jar
 
